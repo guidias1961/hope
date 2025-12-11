@@ -3,150 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOPE - The Prophecy Coin</title>
+    <title>HOPE - The Inevitable</title>
     <link rel="icon" type="image/png" href="logo.png">
 
     <style>
-        /* LOW IQ AESTHETIC CSS */
-        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Impact&display=swap');
+        /* AESTHETIC: HIGH IQ / CONSPIRACY / DARK WEB */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&family=Rajdhani:wght@400;700&display=swap');
+
+        :root {
+            --neon-green: #00ff41;
+            --neon-red: #ff003c;
+            --cyber-black: #050505;
+            --grid-color: #1a1a1a;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
 
         body {
-            background-color: #f0f0e0; /* Slightly dirty looking background */
-            font-family: 'Comic Neue', 'Arial', sans-serif;
+            background-color: var(--cyber-black);
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 30px 30px;
+            font-family: 'Rajdhani', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        /* CRT SCANLINE EFFECT OVERLAY */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            z-index: 999;
         }
 
         h1, h2, h3 {
-            font-family: 'Impact', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 3px;
+            margin: 0;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
+            z-index: 10;
         }
 
         /* HERO SECTION */
         .hero {
-            padding: 50px 20px;
-            border-bottom: 5px solid black;
-            background: repeating-linear-gradient(
-                45deg,
-                #ffffff,
-                #ffffff 10px,
-                #f0f0f0 10px,
-                #f0f0f0 20px
-            );
+            padding: 80px 20px;
+            position: relative;
+            border-bottom: 2px solid var(--neon-green);
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
         }
 
         .main-logo {
-            width: 300px;
+            width: 220px;
             height: auto;
-            border: 5px solid gold;
-            border-radius: 50%;
-            /* A little bit of jankiness */
-            transform: rotate(-2deg);
-            box-shadow: 10px 10px 0px black;
+            filter: drop-shadow(0 0 15px var(--neon-green));
+            animation: float 6s ease-in-out infinite;
         }
 
         .motto-main {
-            font-size: 3em;
-            color: red;
-            text-shadow: 2px 2px 0px black;
-            margin-top: 20px;
+            font-size: 4em;
+            color: #fff;
+            text-shadow: 0 0 10px var(--neon-green);
+            margin-top: 30px;
+            line-height: 1;
         }
 
         .motto-sub {
-            font-size: 2em;
-            color: gold;
-            background-color: black;
-            display: inline-block;
-            padding: 5px 15px;
-            transform: rotate(1deg);
+            font-size: 1.5em;
+            color: var(--neon-green);
+            margin-top: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 5px;
         }
 
-        /* BUTTONS */
+        .narrative-box {
+            background: var(--glass);
+            border: 1px solid var(--neon-green);
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 700px;
+            backdrop-filter: blur(5px);
+            text-align: left;
+            position: relative;
+        }
+
+        .narrative-box::before {
+            content: "CLASSIFIED // LEVEL 5";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--cyber-black);
+            color: var(--neon-green);
+            padding: 0 10px;
+            font-size: 0.8em;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .narrative-text {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .highlight {
+            color: var(--neon-green);
+            font-weight: bold;
+        }
+
+        /* BUTTONS - CYBERPUNK STYLE */
         .btn-container {
-            margin-top: 40px;
+            margin-top: 50px;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             flex-wrap: wrap;
         }
 
         .btn {
-            font-family: 'Impact', sans-serif;
-            font-size: 24px;
-            padding: 15px 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+            padding: 20px 40px;
             text-decoration: none;
-            color: white;
-            border: 4px solid black;
-            box-shadow: 5px 5px 0px black;
-            transition: all 0.1s;
+            color: var(--neon-green);
+            background: transparent;
+            border: 2px solid var(--neon-green);
+            position: relative;
+            transition: all 0.3s;
+            overflow: hidden;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 900;
         }
 
-        .btn:active {
-            box-shadow: 0px 0px 0px black;
-            transform: translate(5px, 5px);
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--neon-green);
+            transition: all 0.3s;
+            z-index: -1;
         }
 
-        .btn-buy {
-            background-color: #00c853; /* BUY GREEN */
-            animation: pulse 2s infinite;
+        .btn:hover {
+            color: var(--cyber-black);
+            box-shadow: 0 0 20px var(--neon-green);
         }
 
-        .btn-x {
-            background-color: #000000; /* X BLACK */
+        .btn:hover::before {
+            left: 0;
         }
 
-        /* THE PROPHECY SECTION */
+        .btn-secondary {
+            border-color: #fff;
+            color: #fff;
+        }
+        
+        .btn-secondary::before {
+            background: #fff;
+        }
+
+        .btn-secondary:hover {
+            color: #000;
+            box-shadow: 0 0 20px #fff;
+        }
+
+        /* PROPHECY SECTION */
         .prophecy-section {
-            padding: 60px 20px;
-            background-color: #ffecb3; /* Look like old paper */
-            border-bottom: 5px solid black;
+            padding: 80px 20px;
+            background: #000;
         }
 
-        .tweet-shrine {
-            background-color: white;
-            padding: 20px;
-            border: 8px dashed gold;
+        .prophecy-title {
+            color: var(--neon-red);
+            text-shadow: 0 0 10px var(--neon-red);
+            margin-bottom: 40px;
+        }
+
+        .tweet-container {
+            border: 2px solid var(--neon-red);
             display: inline-block;
-            margin-top: 20px;
+            padding: 10px;
+            background: rgba(255, 0, 60, 0.05);
+            position: relative;
         }
 
         .tweet-img {
             max-width: 100%;
             height: auto;
-            border: 2px solid black;
+            filter: contrast(1.2) grayscale(0.5);
+            display: block;
         }
 
-        .serious-text {
-            font-size: 1.5em;
-            font-weight: bold;
-            max-width: 700px;
-            margin: 20px auto;
-            line-height: 1.2;
+        .analysis-text {
+            color: #fff;
+            max-width: 800px;
+            margin: 30px auto;
+            font-size: 1.3em;
+            border-left: 4px solid var(--neon-red);
+            padding-left: 20px;
+            text-align: left;
         }
 
         /* FOOTER */
         footer {
-            padding: 40px;
-            background-color: black;
-            color: white;
-            font-size: 1.2em;
+            padding: 50px;
+            background: #080808;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.9em;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        .ticker {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-green);
+            margin-bottom: 20px;
+        }
+
+        /* ANIMATIONS */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+
+        .glitch-text:hover {
+            animation: glitch 0.2s cubic-bezier(.25, .46, .45, .94) both infinite;
+            color: var(--neon-red);
         }
 
     </style>
@@ -155,52 +266,60 @@
 
     <div class="hero">
         <div class="container">
-            <img src="logo.png" alt="Hope the Degen Dove" class="main-logo">
+            <img src="logo.png" alt="Hope Protocol" class="main-logo">
             
-            <h1 class="motto-main">YOU HAVE HOPE OTHER COINS HAVE NOT.</h1>
-            <h2 class="motto-sub">AND HOPE IS HERE.</h2>
+            <h1 class="motto-main glitch-text">PROJECT HOPE</h1>
+            <h2 class="motto-sub">THE SIGNAL HAS BEEN DECODED</h2>
 
-            <div class="serious-text" style="margin-top: 30px;">
-                <p>We don't know what utility is. We just know the Oracle spoke and this bird appeared. It's wearing Gucci. It has a pot of gold. It's very serious finance technology.</p>
+            <div class="narrative-box">
+                <p class="narrative-text">
+                    The market operates on noise. <span class="highlight">We operate on signal.</span><br><br>
+                    While the masses were distracted, the Oracle provided the coordinates. This is not a coincidence. This is a mathematical inevitability designed for the few who can see the pattern.
+                </p>
             </div>
 
             <div class="btn-container">
-                <a href="#" class="btn btn-buy">💰 BUY $HOPE NOW OMG 💰</a>
-                <a href="https://x.com" target="_blank" class="btn btn-x">🐦 FOLLOW ON X 🐦</a>
+                <a href="#" class="btn">INITIALIZE BUY SEQUENCE</a>
+                <a href="https://x.com" target="_blank" class="btn btn-secondary">ACCESS COMM CHANNEL</a>
             </div>
         </div>
     </div>
 
     <div class="prophecy-section">
         <div class="container">
-            <h1>THE SACRED TEXTS</h1>
-            <p class="serious-text">
-                On December 10th, 2025, the market was REKT. All hope was lost. Then, He spoke to us.
-            </p>
-            <p class="serious-text" style="font-size: 1.2em;">
-                We interpreted His divine words literally because we have very smooth brains.
-            </p>
+            <h2 class="prophecy-title">THE ORIGIN TRANSMISSION</h2>
             
-            <div class="tweet-shrine">
-                <img src="tweet.png" alt="The Sacred Richard Heart Tweet" class="tweet-img">
+            <div class="analysis-text">
+                <p>TIMESTAMP: DEC 10, 2025<br>
+                SUBJECT: RICHARD HEART<br>
+                STATUS: <span style="color: var(--neon-red)">VERIFIED</span></p>
+                <p>The text was clear. The bird was the key. He didn't just tweet; he signaled the beginning of the parabolic arc.</p>
             </div>
 
-            <p class="serious-text" style="margin-top: 30px; color: red;">
-                "YOUR TIME IS NOW." - The Oracle
-            </p>
+            <div class="tweet-container">
+                <img src="tweet.png" alt="The Source Code" class="tweet-img">
+            </div>
+
+            <h3 style="margin-top: 40px; color: #fff;">THEY TOLD YOU IT WAS LUCK.<br>WE KNOW IT WAS FATE.</h3>
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <h2>DON'T FADE THE BIRD.</h2>
-            <p>This is not financial advice. We literally don't know how to read. $HOPE is a meme coin based on a misunderstanding of a tweet.</p>
-            
-            <div class="btn-container" style="margin-top: 20px; justify-content: center;">
-                <a href="#" class="btn btn-buy" style="font-size: 18px;">BUY DIP</a>
-                <a href="https://x.com" target="_blank" class="btn btn-x" style="font-size: 18px;">X</a>
+            <div class="ticker">
+                $HOPE /// SYSTEM ONLINE /// TARGET: MOON /// DO NOT FADE
             </div>
-            <p style="margin-top: 30px; font-size: 0.8em;">© 2025 HOPE COIN LLC (LOW IQ DIVISION)</p>
+            
+            <p>
+                This asset is designed for high-conviction participants only.
+                <br>The code is law. The outcome is binary.
+            </p>
+            
+            <div class="btn-container" style="margin-top: 30px; transform: scale(0.8);">
+                <a href="#" class="btn">ACQUIRE $HOPE</a>
+            </div>
+
+            <p style="margin-top: 40px; opacity: 0.5;">© 2025 HOPE PROTOCOL. DECENTRALIZED ENTITY.</p>
         </div>
     </footer>
 
