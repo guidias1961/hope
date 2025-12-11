@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPE - The Prophecy Coin</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        /* LOW IQ AESTHETIC CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Impact&display=swap');
+
+        body {
+            background-color: #f0f0e0; /* Slightly dirty looking background */
+            font-family: 'Comic Neue', 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Impact', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 50px 20px;
+            border-bottom: 5px solid black;
+            background: repeating-linear-gradient(
+                45deg,
+                #ffffff,
+                #ffffff 10px,
+                #f0f0f0 10px,
+                #f0f0f0 20px
+            );
+        }
+
+        .main-logo {
+            width: 300px;
+            height: auto;
+            border: 5px solid gold;
+            border-radius: 50%;
+            /* A little bit of jankiness */
+            transform: rotate(-2deg);
+            box-shadow: 10px 10px 0px black;
+        }
+
+        .motto-main {
+            font-size: 3em;
+            color: red;
+            text-shadow: 2px 2px 0px black;
+            margin-top: 20px;
+        }
+
+        .motto-sub {
+            font-size: 2em;
+            color: gold;
+            background-color: black;
+            display: inline-block;
+            padding: 5px 15px;
+            transform: rotate(1deg);
+        }
+
+        /* BUTTONS */
+        .btn-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            font-family: 'Impact', sans-serif;
+            font-size: 24px;
+            padding: 15px 30px;
+            text-decoration: none;
+            color: white;
+            border: 4px solid black;
+            box-shadow: 5px 5px 0px black;
+            transition: all 0.1s;
+            text-transform: uppercase;
+        }
+
+        .btn:active {
+            box-shadow: 0px 0px 0px black;
+            transform: translate(5px, 5px);
+        }
+
+        .btn-buy {
+            background-color: #00c853; /* BUY GREEN */
+            animation: pulse 2s infinite;
+        }
+
+        .btn-x {
+            background-color: #000000; /* X BLACK */
+        }
+
+        /* THE PROPHECY SECTION */
+        .prophecy-section {
+            padding: 60px 20px;
+            background-color: #ffecb3; /* Look like old paper */
+            border-bottom: 5px solid black;
+        }
+
+        .tweet-shrine {
+            background-color: white;
+            padding: 20px;
+            border: 8px dashed gold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .tweet-img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid black;
+        }
+
+        .serious-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            max-width: 700px;
+            margin: 20px auto;
+            line-height: 1.2;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 40px;
+            background-color: black;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="container">
+            <img src="logo.png" alt="Hope the Degen Dove" class="main-logo">
+            
+            <h1 class="motto-main">YOU HAVE HOPE OTHER COINS HAVE NOT.</h1>
+            <h2 class="motto-sub">AND HOPE IS HERE.</h2>
+
+            <div class="serious-text" style="margin-top: 30px;">
+                <p>We don't know what utility is. We just know the Oracle spoke and this bird appeared. It's wearing Gucci. It has a pot of gold. It's very serious finance technology.</p>
+            </div>
+
+            <div class="btn-container">
+                <a href="#" class="btn btn-buy">💰 BUY $HOPE NOW OMG 💰</a>
+                <a href="https://x.com" target="_blank" class="btn btn-x">🐦 FOLLOW ON X 🐦</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="prophecy-section">
+        <div class="container">
+            <h1>THE SACRED TEXTS</h1>
+            <p class="serious-text">
+                On December 10th, 2025, the market was REKT. All hope was lost. Then, He spoke to us.
+            </p>
+            <p class="serious-text" style="font-size: 1.2em;">
+                We interpreted His divine words literally because we have very smooth brains.
+            </p>
+            
+            <div class="tweet-shrine">
+                <img src="tweet.png" alt="The Sacred Richard Heart Tweet" class="tweet-img">
+            </div>
+
+            <p class="serious-text" style="margin-top: 30px; color: red;">
+                "YOUR TIME IS NOW." - The Oracle
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h2>DON'T FADE THE BIRD.</h2>
+            <p>This is not financial advice. We literally don't know how to read. $HOPE is a meme coin based on a misunderstanding of a tweet.</p>
+            
+            <div class="btn-container" style="margin-top: 20px; justify-content: center;">
+                <a href="#" class="btn btn-buy" style="font-size: 18px;">BUY DIP</a>
+                <a href="https://x.com" target="_blank" class="btn btn-x" style="font-size: 18px;">X</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.8em;">© 2025 HOPE COIN LLC (LOW IQ DIVISION)</p>
+        </div>
+    </footer>
+
+</body>
+</html>
